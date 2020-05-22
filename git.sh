@@ -19,5 +19,3 @@ else
 	echo >&2 "git安装失败"; 
 	exit 1;
 fi
-
-
