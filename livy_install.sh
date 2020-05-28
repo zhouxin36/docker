@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # 下载 livy
-wget -O livy.tar.gz -c http://mirrors.hust.edu.cn/apache/incubator/livy/0.5.0-incubating/livy-0.5.0-incubating-bin.zip
+wget -O livy.zip -c https://mirrors.tuna.tsinghua.edu.cn/apache/incubator/livy/0.7.0-incubating/apache-livy-0.7.0-incubating-bin.zip
 
 # 解压
-mkdir livy && tar -zvxf livy.tar.gz -C ./livy --strip-components 1
+unzip livy.zip
+
+mv apache-livy-0.7.0-incubating-bin livy
 
 # 删除压缩包
-rm -rf livy.tar.gz
+rm -rf livy.zip
 
 # 进入java
 cd livy
