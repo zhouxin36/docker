@@ -17,3 +17,6 @@ docker build -t registry.cn-shenzhen.aliyuncs.com/zhouxin36/hadoop .
 
 # 上传docker镜像
 docker push registry.cn-shenzhen.aliyuncs.com/zhouxin36/hadoop
+
+# 删除文件夹
+rm -rf hadoop
