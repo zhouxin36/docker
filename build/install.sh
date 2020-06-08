@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# docker rm $(docker ps -aq)
 MIRROR_URL=http://mirrors.aliyun.com/docker-ce/linux/centos
 MIRROR_PACKAGE=${MIRROR_URL}/7/x86_64/stable/Packages
 

@@ -19,3 +19,6 @@ else
 	echo >&2 "git安装失败"; 
 	exit 1;
 fi
+
+git config --global user.email "1561578781@qq.com"
+git config --global user.name "zhouxin36"
