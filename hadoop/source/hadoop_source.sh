@@ -20,3 +20,5 @@ docker push registry.cn-shenzhen.aliyuncs.com/zhouxin36/hadoop
 
 # 删除文件夹
 rm -rf hadoop
+
+# docker run -d --name hadoop registry.cn-shenzhen.aliyuncs.com/zhouxin36/hadoop ping www.baidu.com

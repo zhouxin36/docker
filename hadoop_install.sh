@@ -9,7 +9,7 @@ mkdir hadoop && tar -zvxf hadoop-2.tar.gz -C ./hadoop --strip-components 1
 # 删除压缩包
 rm -rf hadoop-2.tar.gz
 
-# 进入java
+# 进入hadoop
 cd hadoop
 
 # 设置环境变量

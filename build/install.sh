@@ -14,12 +14,24 @@ yum -y install ${MIRROR_PACKAGE}/docker-ce-19.03.8-3.el7.x86_64.rpm
 
 # 添加镜像加速器
 mkdir -p /etc/docker
-tee /etc/docker/daemon.json <<-'EOF'
+tee /etc/docker/daemon.json <<EOF
 {
-  "registry-mirrors": ["https://6eb2jqvr.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://6eb2jqvr.mirror.aliyuncs.com"],
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2",
+  "storage-opts": [
+    "overlay2.override_kernel_check=true"
+  ]
 }
 EOF
 systemctl daemon-reload
+
+# 设置开机启动
+systemctl enable docker
 
 # 启动docker
 systemctl start docker
