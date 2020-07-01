@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 下载 spark
-wget -O spark-2.tar.gz -c https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+wget -O spark-2.tar.gz -c https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.4.6/spark-2.4.6-bin-hadoop2.7.tgz
 
 # 解压
 mkdir spark && tar -zvxf spark-2.tar.gz -C ./spark --strip-components 1
