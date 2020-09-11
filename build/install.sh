@@ -19,7 +19,7 @@ tee /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": ["https://6eb2jqvr.mirror.aliyuncs.com"],
   "exec-opts": ["native.cgroupdriver=systemd"],
-  "data-root": "/data/docker-home",
+  "data-root": "/home/docker-home",
   "log-driver": "json-file",
   "log-opts": {
     "max-size": "100m"
